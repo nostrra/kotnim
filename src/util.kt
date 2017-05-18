@@ -50,7 +50,7 @@ data class Player(var name: String = "", var stones: Int = 0) {
                 if (!(stoneCheck(stonesToTake,1,piles[pile-1].stones))) throw IndexOutOfBoundsException()
                 println("Chose $stonesToTake stones.")
                 stones += stonesToTake
-                totalStones += stonesToTake
+                totalStones -= stonesToTake
                 break
             } catch(e: Exception) {
                 when (e) {
